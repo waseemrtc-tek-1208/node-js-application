@@ -2,7 +2,7 @@ const assert = require('assert');
 const { getGreeting } = require('../src/utils');
 
 function run() {
-  assert.strictEqual(getGreeting(), 'Hello from node-js-applications-1!');
+  assert.strictEqual(getGreeting(), 'Hello from node-js-applications');
   console.log('All tests passed.');
 }
 
