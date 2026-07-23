@@ -1,0 +1,11 @@
+chat:
+  auto_reply: true
+
+reviews:
+  review_status:
+    enabled: true
+
+  path_instructions:
+    - path: "**"
+      instructions: |
+        Block merge for critical and major issues.
