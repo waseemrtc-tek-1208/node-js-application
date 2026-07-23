@@ -12,14 +12,11 @@ reviews:
     base_branches:
       - "develop"                  # only auto-reviews PRs targeting this branch
 
-  # pre_merge_checks:                # optional extra gates beyond code-quality review
-  #   title:
-  #     mode: "off"
-  #   description:
-  #     mode: "off"
-  #   docstring_coverage:
-  #     mode: "off"
-  #   custom_checks: []
+  pre_merge_checks:
+    custom_checks:
+      - name: "No critical issues"
+        mode: "error"
+        instructions: "Fail if the code review identified any security vulnerability, critical bug, or logic error in the diff."
 
 chat:
   auto_reply: true
