@@ -1,0 +1,21 @@
+language: "en-US"
+
+reviews:
+  profile: "assertive"
+  request_changes_workflow: true
+  review_status: true
+
+  auto_review:
+    enabled: true
+    auto_incremental_review: true
+    drafts: false
+    base_branches:
+      - "develop"
+
+  tools:
+    github-checks:
+      enabled: true
+      timeout_ms: 180000   # Wait up to 3 minutes for GitHub Actions
+
+chat:
+  auto_reply: true
