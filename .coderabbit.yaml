@@ -2,21 +2,20 @@ language: "en-US"
 
 reviews:
   profile: "assertive"
-  request_changes_workflow: true   # makes CodeRabbit submit real Approve/Request-changes reviews, not just comments
+  request_changes_workflow: true
   review_status: true
 
   auto_review:
     enabled: true
-    auto_incremental_review: true  # re-reviews automatically when you push fixes
+    auto_incremental_review: true
     drafts: false
     base_branches:
-      - "develop"                  # only auto-reviews PRs targeting this branch
+      - "develop"
 
-  # pre_merge_checks:
-  #   custom_checks:
-  #     - name: "No critical issues"
-  #       mode: "error"
-  #       instructions: "Fail if the code review identified any security vulnerability, critical bug, or logic error in the diff."
+  tools:
+    github-checks:
+      enabled: true
+      timeout_ms: 180000   # Wait up to 3 minutes for GitHub Actions
 
 chat:
   auto_reply: true
